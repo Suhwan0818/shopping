@@ -1,11 +1,8 @@
 const Infomation = () => {
   return (
     <>
-      <article
-        id="basic-me"
-        class="bg-slate-500 text-slate-50 m-1 p-3 relative"
-      >
-        <h1>기본정보</h1>
+      <article className="w-full p-4 text-center bg-slate-500 border rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700 text-slate-50 m-13 relative">
+        <p className="font-bold">기본정보</p>
       </article>
     </>
   );

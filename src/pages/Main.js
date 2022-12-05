@@ -1,12 +1,14 @@
-import Nav from "../components/Nav";
-import Infomation from "../components/Infomation";
-import Footer from "../components/Footer";
+import Nav from '../components/Nav';
+import NameSpace from '../components/NameSpace';
+import Infomation from '../components/Infomation';
+import Footer from '../components/Footer';
 
 const Main = () => {
   return (
     <>
       <Nav />
-      <div class="pt-20">
+      <div className="pt-20">
+        <NameSpace />
         <Infomation />
         <Infomation />
         <Infomation />
