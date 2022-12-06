@@ -1,7 +1,7 @@
 const NameSpace = () => {
   return (
     <>
-      <div className="w-full p-4 text-center bg-white border rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+      <div className="w-full h-full p-4 text-center bg-white border rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
         <h1 className="mt-20 mb-2 text-5xl font-bold text-gray-900 dark:text-white">
           김수환
         </h1>
@@ -29,6 +29,9 @@ const NameSpace = () => {
           </span>
           <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-900">
             Tailwind
+          </span>
+          <span className="bg-green-300 text-green-900 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-300 dark:text-green-1100">
+            NodeJS
           </span>
         </div>
       </div>
