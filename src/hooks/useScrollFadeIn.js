@@ -1,13 +1,27 @@
-import {useCallback, useRef} from 'react';
+import {useCallback, useRef, useEffect} from 'react';
 
 const useScrollFadeIn = () => {
   const dom = useRef();
 
-  const handleScroll = useCallback(() => {
+  const handleScroll = useCallback(([entry]) => {
     const {current} = dom;
-    const currentScrollPosition = window.pageYOffset;
-    const currentDomScrollPosition = currentScrollPosition;
-  });
+    if (entry.isIntersecting) {
+      current.style.transitionProperty = 'opacity transform';
+      current.style.transitionDuration = '1s';
+      current.style.transitionTimingFunction = 'cubic-bezier(0, 0, 0.2, 1)';
+    }
+  }, []);
+
+  useEffect(() => {
+    let observer;
+    const {current} = dom;
+    if (current) {
+      observer = new IntersectionObserver(handleScroll, {threshold: 0.7});
+      observer.observe(current);
+
+      return () => observer && observer.disconnect();
+    }
+  }, [handleScroll]);
 
   return {
     ref: dom,
